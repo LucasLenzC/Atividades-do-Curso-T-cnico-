@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+typedef struct{
+	int dia,mes, ano;
+}data;
+
+int main(int argc, char **argv) {
+		printf("sizeof (data) = %d\n",sizeof(data));
+		printf("sizeof (data *) = %d\n",sizeof(data *));
+		return 0;
+	}
+
+	A diferença entre os dois printf é que no primeiro pintf é printado o tamanho ocupado na memoria pelos parametros da estrutura,
+	ja no segundo printf é representado pelo tamanho que ela ocupa em bits na memoria.

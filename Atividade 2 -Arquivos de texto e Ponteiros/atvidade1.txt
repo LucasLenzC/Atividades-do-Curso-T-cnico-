@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc, char **argv) {
+	int *p, *q;	//Declaração dos ponteiros inteiros q e p
+	
+			p = malloc (sizeof (int));	//Cria um endereço de memoria para p
+
+			*p = 123;//coloca "123" no conteudo do ponteiro p
+
+			q = malloc (sizeof (int));	//Cria um endereço de memoria para q
+			*q = *p;	//coloca o mesmo conteudo de q no malloc de q
+			q = p;	//aponta q para o endeço p q aponta para o primeiro malloc
+			free (p);	//apaga o prieiro malloc
+			free (q);// má ideia...	//apaga o segundo malloc
+			q = NULL;// boa ideia	//retira o segundo mallox
+
+	}
